@@ -117,10 +117,10 @@ Write-Host "Creating (or recreating) empty output files..." -ForegroundColor gre
 Create-Empty-Output-Files -fixedFilePath $fixedSourceFilePath -outputFilePath $OutputFileName
 
 Write-Host ''
-Write-Host "Transferring relevant image tags to 'fixed' HTML files..." -ForegroundColor green
+Write-Host "Reformatting HTML markup to ensure line breaks..." -ForegroundColor green
 Populate-Fixed-File -fixedFilePath $fixedSourceFilePath -sourceFilePath $SourcePath
 
-if ($ImagesBeforePath -ne $null) {
+if ($ImagesBeforePath) {
     Write-Host ''
     Write-Host "Adding images from 'before' file ("$ImagesBeforePath" )..." -ForegroundColor green
     Add-Text-Images-To-Output-File -listFilePath $ImagesBeforePath -outputFilePath $OutputFileName
@@ -130,7 +130,7 @@ Write-Host ''
 Write-Host "Adding images from 'fixed' HTML file ("$fixedSourceFilePath" )..." -ForegroundColor green
 Add-Html-Images-To-Output-File -fixedFilePath $fixedSourceFilePath -outputFilePath $OutputFileName
 
-if ($ImagesBeforePath -ne $null) {
+if ($ImagesBeforePath) {
     Write-Host ''
     Write-Host "Adding images from 'after' file ("$ImagesAfterPath" )..." -ForegroundColor green
     Add-Text-Images-To-Output-File -listFilePath $ImagesAfterPath -outputFilePath $OutputFileName
