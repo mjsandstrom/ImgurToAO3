@@ -5,8 +5,11 @@ Ideal for comics and other sequential, visual works.
 
 ✏️ The images must remain uploaded on Imgur, as AO3 does not provide image hosting. This simply allows them to be displayed as a work.
 
+This repository contains some example input and output files, but you can delete everything but the .ps1 file if you want.
+
 ## Instructions
 
+1. Download or clone this repository to your local machine
 1. Sign in to imgur and edit the post you want to transfer.
    - You must be **editing a post *you own***, or else there aren't distinguishing markers between the posts's content and the other miscellaneous images on the page.
    - Getting them in the correct order of the imgur post itself is its own beast, and I can't really help you there 😅
